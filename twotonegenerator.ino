@@ -186,6 +186,9 @@ void updateFrequencies()
   ticks = normalized_phase_increment * (float)frequency2;
   major_inc2 = (uint8_t)ticks;
   minor_inc2 = 32768 * (ticks - (float)major_inc2);
+
+  // reset initial phase back to 0
+  index1 = index2 = 0;
 }
 
 // rotary encoder vars to determine which direction the dial is turning
